@@ -10,7 +10,6 @@ import {
 import { Container } from './common';
 
 class OnDrag extends Component {
-
   componentWillMount() {
     this.animatedValue = new Animated.ValueXY();
     this._value = { x: 0, y: 0 }
