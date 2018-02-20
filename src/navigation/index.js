@@ -5,6 +5,8 @@ import OnDrag from '../components/OnDrag';
 import Rotate from '../components/Rotate';
 import Sequence from '../components/Sequence';
 import Stagger from '../components/Stagger';
+import Wing from '../components/Wing';
+
 
 const Drawer = DrawerNavigator({
   Home: {
@@ -25,6 +27,9 @@ const Drawer = DrawerNavigator({
   Stagger: {
     screen: Stagger,
   },
+  Wing: {
+    screen: Wing,
+  }
 })
 
 export const Navigator = StackNavigator({
