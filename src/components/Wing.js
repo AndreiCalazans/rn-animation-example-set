@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
-import { WingTransition } from './common';
+import { Container, WingTransition } from './common';
 
 
 class Wing extends React.Component {
@@ -29,4 +29,4 @@ class Wing extends React.Component {
   }
 }
 
-export default Wing;
+export default Container(Wing, false);

@@ -4,22 +4,22 @@ import { View, StyleSheet } from 'react-native';
 
 import { DrawerBtn } from '../common';
 
-const Container = (Component) => class extends React.Component {
+const Container = (Component, hasMargin = true) => class extends React.Component {
   render() {
     return (
-    <View style={styles.container}>
+    <View style={styles.container(hasMargin)}>
       <Component {...this.props}/>
-      <DrawerBtn toggleDrawer={() => this.props.navigation.navigate('DrawerOpen')} />
+      <DrawerBtn hasMargin={hasMargin} toggleDrawer={() => this.props.navigation.navigate('DrawerOpen')} />
      </View> 
     )
   }
 } 
 
-const styles = StyleSheet.create({
-  container: {
-    margin: 30,
+const styles = {
+  container: (hasMargin) => ({
+    margin: hasMargin ? 30 : 0,
     flex: 1,
-  },
-})
+  }),
+};
 
 export default Container;
